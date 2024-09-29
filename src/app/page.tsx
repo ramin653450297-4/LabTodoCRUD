@@ -50,7 +50,7 @@ export default function Home() {
         body: JSON.stringify(newTask),
       });
       if (response.ok) {
-        fetchTasks(); // Refresh the task list after creating
+        fetchTasks();
         setNewTask({ name: "", note: "", status: false, dueDate: "" });
       }
     } catch (error) {
@@ -68,7 +68,7 @@ export default function Home() {
         body: JSON.stringify({ _id, status: !currentStatus }),
       });
       if (response.ok) {
-        fetchTasks(); // Refresh task list after update
+        fetchTasks(); 
       }
     } catch (error) {
       console.error("Error updating task status:", error);
@@ -139,14 +139,14 @@ export default function Home() {
       <List className={styles.todoList}>
         {todos.map((todo) => (
           <ListItem key={todo._id} className={todo.status ? styles.completed : ""}>
-            <ListItemText
-              primary={todo.name}
-              secondary={
-                todo.note || todo.dueDate
-                  ? `${todo.note ? todo.note : ""} ${todo.dueDate ? `- ${new Date(todo.dueDate).toLocaleDateString("th-TH")}` : ""}`
-                  : ""
-              }
-            />
+           <ListItemText
+          primary={todo.name}
+          secondary={`
+            ${todo.note || ""}
+            ${todo.dueDate ? `Due: ${new Date(todo.dueDate).toLocaleDateString("th-TH")}` : ""}
+          `.trim()}
+        />
+
 
             <Button
               variant="outlined"
