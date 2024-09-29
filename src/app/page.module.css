@@ -1,0 +1,91 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.createForm input,
+.createForm textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #007bff; 
+  border-radius: 20px; 
+}
+
+.createForm button {
+  padding: 10px;
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.createForm button:hover {
+  background-color: #218838; 
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #007bff; 
+  border-radius: 20px; 
+}
+
+.todoItem h3 {
+  margin: 0;
+}
+
+.completed {
+  text-decoration: line-through; /* ขีดฆ่า */
+  color: gray; 
+}
+
+.completeButton {
+  background-color: #ffc107; 
+  color: white;
+  border-radius: 20px; 
+  padding: 10px;
+  cursor: pointer;
+}
+
+.completeButton:hover {
+  background-color: #ffc107; 
+}
+
+.incompleteButton {
+  background-color: #28a745; 
+  color: white;
+  border-radius: 20px; 
+  padding: 10px;
+  cursor: pointer;
+}
+
+.incompleteButton:hover {
+  background-color:#218838 ; 
+}
+
+.deleteButton {
+  background-color: #dc3545; 
+  color: white;
+  border-radius: 20px; 
+  padding: 10px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #c82333; 
+}
